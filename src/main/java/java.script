@@ -1,0 +1,16 @@
+#!/home/piotr/.sdkman/candidates/java/current/bin/java --source 11
+
+/**
+ * Created by Piotr Przybył (piotr@przybyl.org) on 2019-01-13.
+ */
+public class JavaScript {
+
+    public static void main(String[] args) {
+        System.out.println("This is Java Script! 👿");
+        var processors = Runtime.getRuntime().availableProcessors();
+        var freeMem = Runtime.getRuntime().freeMemory();
+
+        System.out.println("I have "+ processors + " CPUs available and ca. "+ freeMem + " bytes to allocate new objects.");
+
+    }
+}

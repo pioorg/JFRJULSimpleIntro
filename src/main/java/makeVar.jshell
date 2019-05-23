@@ -1,0 +1,15 @@
+var one = "One"
+var two = "Two"
+var list = List.of(one, two)
+var stream = list.stream()
+var lowerCaseList = stream.map(s->s.toLowerCase()).collect(Collectors.toUnmodifiableList())
+list.getClass().getCanonicalName()
+stream.getClass().getCanonicalName()
+lowerCaseList.getClass().getCanonicalName()
+List<String> listOfStrings = lowerCaseList
+List<String> empty1 = new ArrayList<>()
+List<String> empty2 = List.of()
+var empty3 = List.of()
+//List<String> empty4 = empty3
+System.out.println("See the list " + lowerCaseList)
+/exit
