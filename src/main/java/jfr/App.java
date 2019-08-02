@@ -8,15 +8,15 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.stream.Stream;
 
 public class App {
-    static BlockingQueue<byte[]> queue = new LinkedBlockingQueue<>();
+    private static BlockingQueue<byte[]> queue = new LinkedBlockingQueue<>();
 
     public static void main(String[] args) {
         if (args.length > 0) {
             System.out.println("I've got the following arguments:");
             Stream.of(args).forEach(System.out::println);
         }
-        new Thread(new Consumer()).start();
-        new Thread(new Producer()).start();
+        new Thread(new Consumer(), "Consumer").start();
+        new Thread(new Producer(), "Producer").start();
 
     }
 
